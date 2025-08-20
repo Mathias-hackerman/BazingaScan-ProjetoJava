@@ -13,13 +13,13 @@ class ScannerDeRede {
     // --- MÉTODO DE AÇÃO --
     // A ação que nosso scanner sabe fazer
     public void escanear(int portaInicial, int portaFinal) {
-    	System.out.println("Iniciando varredura no alvo" + this.ipAlvo + "...")
+    	System.out.println("Iniciando varredura no alvo" + this.ipAlvo + "...");
         
         for (int porta = portaInicial; porta <= portaFinal; porta ++) {
         	try {
             	Socket socket = new Socket(this.ipAlvo, porta);
                 System.out.println("Porta " + porta + " está ABERTA");
-                socket.close()
+                socket.close();
             } catch (Exception e) {
             	System.out.println("Porta" + porta + "Fechada ou falhou em conectar");
             }
